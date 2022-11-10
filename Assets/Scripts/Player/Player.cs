@@ -11,14 +11,15 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow)) GoLeft();
-        if (Input.GetKeyDown(KeyCode.RightArrow)) GoRight();
-        if (Input.GetKeyDown(KeyCode.UpArrow)) GoUp();
-        if (Input.GetKeyDown(KeyCode.DownArrow)) GoDown();
+        else if (Input.GetKeyDown(KeyCode.RightArrow)) GoRight();
+        else if (Input.GetKeyDown(KeyCode.UpArrow)) GoUp();
+        else if (Input.GetKeyDown(KeyCode.DownArrow)) GoDown();
 
     }
+
 
     void GoLeft()
     {
